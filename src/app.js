@@ -27,10 +27,10 @@ function showTemperature(response){
     humidityElement.innerHTML=response.data.main.humidity;
     windElement.innerHTML=Math.round(response.data.wind.speed);
     dateElement.innerHTML=formatDate(response.data.dt * 1000);
-    iconElement.innerHTML=`http://openweathermap.org/img/wn/04d@2x.png`;
+    iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 let apiKey = "21fd182fccb9e77383ba25f615e7b658";
-let city = "New York";
+let city = "Beijing";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}&units=metric`;
 //let apiUrl = "https://api.openweathermap.org/data/2.5/weather?";
 //let finalUrl = `${apiUrl}lat=${latitude}&lon=${longitude}&APPID=${apiKey}&units=metric`;
