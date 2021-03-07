@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" type="image/png" href="src/weather.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/style.css">    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="overview">
+                <h1 id="city">
+                </h1>
+                <ul>
+                    <li>Last updated: <span id="date"></span></li>
+                    <li id="currentConditions"></li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="clearfix temperature">
+                        <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="Clear" class="float-left" id="icon"/>
+                        <strong class="float-left" id="currentTemperature"></strong> 
+                        <span class="units">°C | <a href="#">°F</a></span>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <ul>
+                        <li>
+                            Humidity: <span id="humidity"></span>%
+                        </li>
+                        <li>
+                            Wind: <span id="wind"></span> km/h
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <small>
+                <a href="https://github.com/julianasaavedra/WeatherApp" target="_blank">Open-source</a> by Juliana
+            </small>
+        </div>
+    </div>
+    <script src ="src/app.js"></script>
+</body>
+</html>
