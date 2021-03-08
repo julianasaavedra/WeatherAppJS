@@ -27,9 +27,11 @@ function formatTime(timestamp){
 }
 
 function showTemperature(response){
+    console.log(response.data);
     let cityElement=document.querySelector("#city");
     let temperatureElement=document.querySelector("#currentTemperature");
     let conditionsElement=document.querySelector("#currentConditions");
+    let pressureElement=document.querySelector("#pressure"); 
     let humidityElement = document.querySelector("#humidity");
     let windElement=document.querySelector("#wind");
     let dateElement=document.querySelector("#date");
@@ -37,6 +39,7 @@ function showTemperature(response){
     cityElement.innerHTML=response.data.name;
     temperatureElement.innerHTML=Math.round(response.data.main.temp);
     conditionsElement.innerHTML=response.data.weather[0].description;
+    pressureElement.innerHTML=response.data.main.pressure;
     humidityElement.innerHTML=response.data.main.humidity;
     windElement.innerHTML=Math.round(response.data.wind.speed);
     dateElement.innerHTML=formatDate(response.data.dt * 1000);
