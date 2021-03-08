@@ -33,6 +33,16 @@ body {
 .row {
   margin-bottom: 20px;
 }
+
+.temperature .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+  text-decoration: none;
+}
+
+.temperature .active:hover {
+  text-decoration: none;
+}
 h1 {
   color: rgb(135, 135, 135);
   font-size: 24px;
